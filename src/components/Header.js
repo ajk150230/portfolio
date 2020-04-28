@@ -22,9 +22,15 @@ export default function Header() {
         <div className="img-container">
           <div className="intro">
             <div className="intro-container">
-
-            <div className="intro-content">Hi, I'm Alex.</div>
-            <div className="intro-content-2">I'm a Full Stack Web Developer.</div>
+              <div className="intro-content-container">
+                <div className="intro-content">Hi, I'm </div>
+                <div className="intro-content" id="name">
+                  Alex.
+                </div>
+              </div>
+              <div className="intro-content-2">
+                I'm a Full Stack Web Developer.
+              </div>
             </div>
           </div>
           <div
