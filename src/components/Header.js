@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import dallas from "../Images/dallas-cover.webp";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
+import Nav from './Body'
 import { TimelineLite, Power2 } from "gsap";
 
 export default function Header() {
@@ -14,7 +15,7 @@ export default function Header() {
     tl.to(container, 0.5, { css: { visibility: "visible" } })
       .to(imageReveal, 1.4, { height: "0%", ease: Power2.easeInOut })
       .from(image, 1.4, { scale: 2, ease: Power2.easeInOut, delay: -1.6 })
-      .from(cover, 1.4, { scale: 2, ease: Power2.easeInOut, delay: -1.6 });
+      .from(cover, 1.4, { scale: 2, ease: Power2.easeIn, delay: -1.6 });
   });
   return (
     <main className="bannerMain">
@@ -23,16 +24,17 @@ export default function Header() {
           <div className="intro">
             <div className="intro-container">
               <div className="intro-content-container">
-                <div className="intro-content">Hi, I'm </div>
-                <div className="intro-content" id="name">
+                <span className="intro-content">Hi, I'm </span>
+                <span className="intro-content" id="name">
                   Alex.
-                </div>
+                </span>
               </div>
-              <div className="intro-content-2">
+              <span className="intro-content-2">
                 I'm a Full Stack Web Developer.
-              </div>
+              </span>
             </div>
           </div>
+          <Nav/>
           <div
             className="img"
             style={{ backgroundImage: `url(${dallas})` }}

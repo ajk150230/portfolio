@@ -10,7 +10,6 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <Body />
         <Projects />
         <Footer />
       </div>
