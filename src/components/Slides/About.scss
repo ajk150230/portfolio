@@ -1,0 +1,47 @@
+.about-container{
+    width: 90vw;
+    height: 70vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: 8;
+    border-radius: 7px;
+    background-color: rgb(63, 49, 116);
+    color: white;
+    display: flex;
+}
+.about-content{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    #about-card{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+        border-bottom: solid 1px grey;
+        background-color: rgb(87, 68, 155);
+    }
+    .devm{
+        height: 15 0px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+    #about-card-text{
+        width: 600px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        .title{
+            font-size: 30px;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            color: rgb(185, 255, 249)
+        }
+        .about-card-content{
+            font-size: 12px;
+            color: rgb(230, 230, 230)
+        }
+    }
+}

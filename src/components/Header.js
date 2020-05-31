@@ -31,9 +31,9 @@ export default function Header() {
             <div className="intro-container">
               <span className='intro-line-2'>Alex</span>
               <span className='intro-line-3'>also Sung Kim,</span>
-              <span className='intro-line-3'>Full Stack Web Developer,</span>
-              <span className='intro-line-3'>Design Enthusiast,</span>
-              <span className='intro-line-3'>Food Fanatic</span>
+              <span className='intro-line-3'>Front-end Developer,</span>
+              <span className='intro-line-3'>Back-end Developer,</span>
+              <span className='intro-line-3'>UI/UX engineer</span>
             </div>
           </div>
           <Nav/>

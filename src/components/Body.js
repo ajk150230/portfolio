@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { TweenMax, Power3, Power2 } from "gsap";
 import AboutPage from './Slides/AboutPage'
+import SkillsPage from './Slides/Skillspage'
 import dallas from "../Images/dallas-cover.webp";
 
 export default function Body() {
@@ -41,9 +42,11 @@ export default function Body() {
     setSkills(false);
     setProjects(false);
     setContacts(false);
+    console.log(about)
 
   };
   const handleSkills = () => {
+    setSkills(true);
     TweenMax.to(card1, 0.1, {
       fontSize: "22px",
       borderBottom: "solid 2px #F985FF",
@@ -56,7 +59,6 @@ export default function Body() {
       color: 'white'
     }, 0.1)
     setAbout(false);
-    setSkills(true);
     setProjects(false);
     setContacts(false);
   };
@@ -94,41 +96,47 @@ export default function Body() {
     setProjects(false);
     setContacts(true);
   };
-
+ const exitAll = () => {
+  setAbout(false);
+  setSkills(false);
+  setProjects(false);
+  setContacts(false);
+ }
   return (
     <>
     <div className="body-container" ref={(el) => (container = el)}>
       <div
         className="info"
         ref={(el) => (card = el)}
-        onClick={about == false ? handleAbout : ''}
+        onClick={about == false ? handleAbout : exitAll}
       >
         About
       </div>
       <div
         className="info"
         ref={(el) => (card1 = el)}
-        onClick={skills !== true ? handleSkills : ""}
+        onClick={skills == false ? handleSkills : exitAll}
       >
         Skills
       </div>
       <div
         className="info"
         ref={(el) => (card2 = el)}
-        onClick={projects !== true ? handleProjects : ""}
+        onClick={projects !== true ? handleProjects : exitAll}
       >
         Projects
       </div>
       <div
         className="info"
         ref={(el) => (card3 = el)}
-        onClick={contacts !== true ? handleContacts : ""}
+        onClick={contacts !== true ? handleContacts : exitAll}
       >
         Contacts
       </div>
     </div>
     <span>
-      {about == true ? <AboutPage/>: ''}
+      {about == true ? <AboutPage/> : exitAll}
+      {skills == true ? <SkillsPage/> : exitAll}
     </span>
     </>
   );
