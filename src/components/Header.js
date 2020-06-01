@@ -31,9 +31,10 @@ export default function Header() {
             <div className="intro-container">
               <span className='intro-line-2'>Alex</span>
               <span className='intro-line-3'>also Sung Kim,</span>
-              <span className='intro-line-3'>Front-end Developer,</span>
-              <span className='intro-line-3'>Back-end Developer,</span>
-              <span className='intro-line-3'>UI/UX engineer</span>
+              <span className='intro-line-3'>Full Stack Web Developer,</span>
+              <span className='intro-line-3'>AlexKimWebDev@gmail.com</span>
+              <a className='intro-line-3' style={{color: 'light grey'}}href="https://www.linkedin.com/in/alex-kim-7816901a2/">LinkedIn</a>
+              <a className='intro-line-3' style={{color: 'light grey'}}href="https://github.com/ajk150230">GitHub</a>
             </div>
           </div>
           <Nav/>

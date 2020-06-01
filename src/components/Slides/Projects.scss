@@ -1,0 +1,62 @@
+.projects-container {
+  width: 90vw;
+  height: 70vh;
+  position: relative;
+  z-index: 8;
+  border-radius: 7px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.photos{
+    width: 15%;
+    height: 100%;
+    background-size: cover;
+    border-bottom:solid 2px white
+}
+.project-title{
+    width: 15%;
+    height: 100%;
+    background-color: rgb(84, 153, 218);
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15x;
+    color: white;
+    border-bottom: solid 2px gray;
+}
+#wiltt{
+    background-color: rgb(158, 52, 73);
+}
+.projects-card{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 60px;
+    position: relative;
+    z-index: inherit;
+}
+
+.img-3{
+    width: 90vw;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 0;
+  }
+  .img-cover-3 {
+    width: 90vw;
+    height: 70vh;
+    background-color: rgb(52, 59, 88);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }

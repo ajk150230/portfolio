@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { TweenMax, Power3, Power2 } from "gsap";
 import AboutPage from './Slides/AboutPage'
 import SkillsPage from './Slides/Skillspage'
+import ProjectsPage from './Slides/ProjectsPage'
 import dallas from "../Images/dallas-cover.webp";
 
 export default function Body() {
@@ -14,12 +15,12 @@ export default function Body() {
   const [about, setAbout] = useState(false);
   const [skills, setSkills] = useState(false);
   const [projects, setProjects] = useState(false);
-  const [contacts, setContacts] = useState(false);
+  // const [contacts, setContacts] = useState(false);
 
   useEffect(() => {
     TweenMax.to(container, 1, {});
     TweenMax.staggerFrom(
-      [card, card1, card2, card3],
+      [card, card1, card2],
       0.3,
       { opacity: 0, y: 40, ease: Power3.easeOut, delay: 1.2 },
       0.4
@@ -33,7 +34,7 @@ export default function Body() {
       color: "#ff7b00",
       ease: Power2.easeIn,
     });
-    TweenMax.staggerTo([card1, card2, card3], 0.1, {
+    TweenMax.staggerTo([card1, card2], 0.1, {
       fontSize: "1.1em/1",
       border: 'none',
       color: 'white'
@@ -41,7 +42,7 @@ export default function Body() {
     setAbout(true);
     setSkills(false);
     setProjects(false);
-    setContacts(false);
+    // setContacts(false);
     console.log(about)
 
   };
@@ -53,14 +54,14 @@ export default function Body() {
       color: "#F985FF",
       ease: Power2.easeOut,
     });
-    TweenMax.staggerTo([card, card2, card3], 0.1, {
+    TweenMax.staggerTo([card, card2], 0.1, {
       fontSize: "1.1em/1",
       border: 'none',
       color: 'white'
     }, 0.1)
     setAbout(false);
     setProjects(false);
-    setContacts(false);
+    // setContacts(false);
   };
   const handleProjects = () => {
     TweenMax.to(card2, 0.1, {
@@ -69,7 +70,7 @@ export default function Body() {
       color: "#E8406E",
       ease: Power2.easeOut,
     });
-    TweenMax.staggerTo([card, card1, card3], 0.1, {
+    TweenMax.staggerTo([card, card1], 0.1, {
       fontSize: "1.1em/1",
       border: 'none',
       color: 'white'
@@ -77,30 +78,30 @@ export default function Body() {
     setAbout(false);
     setSkills(false);
     setProjects(true);
-    setContacts(false);
+    // setContacts(false);
   };
-  const handleContacts = () => {
-    TweenMax.to(card3, 0.1, {
-      fontSize: "22px",
-      borderBottom: "solid 2px #9A8EFF",
-      color: "#9A8EFF",
-      ease: Power2.easeOut,
-    });
-    TweenMax.staggerTo([card, card1, card2], 0.1, {
-      fontSize: "1.1em/1",
-      border: 'none',
-      color: 'white'
-    }, 0.1)
-    setAbout(false);
-    setSkills(false);
-    setProjects(false);
-    setContacts(true);
-  };
+  // const handleContacts = () => {
+  //   TweenMax.to(card3, 0.1, {
+  //     fontSize: "22px",
+  //     borderBottom: "solid 2px #9A8EFF",
+  //     color: "#9A8EFF",
+  //     ease: Power2.easeOut,
+  //   });
+  //   TweenMax.staggerTo([card, card1, card2], 0.1, {
+  //     fontSize: "1.1em/1",
+  //     border: 'none',
+  //     color: 'white'
+  //   }, 0.1)
+  //   setAbout(false);
+  //   setSkills(false);
+  //   setProjects(false);
+  //   setContacts(true);
+  // };
  const exitAll = () => {
   setAbout(false);
   setSkills(false);
   setProjects(false);
-  setContacts(false);
+  // setContacts(false);
  }
   return (
     <>
@@ -126,17 +127,18 @@ export default function Body() {
       >
         Projects
       </div>
-      <div
+      {/* <div
         className="info"
         ref={(el) => (card3 = el)}
         onClick={contacts !== true ? handleContacts : exitAll}
       >
         Contacts
-      </div>
+      </div> */}
     </div>
     <span>
       {about == true ? <AboutPage/> : exitAll}
       {skills == true ? <SkillsPage/> : exitAll}
+      {projects == true ? <ProjectsPage/> : exitAll}
     </span>
     </>
   );

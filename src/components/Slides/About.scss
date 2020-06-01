@@ -1,3 +1,16 @@
+.bannerMain {
+    top: 0;
+    z-index: 0;
+    .container {
+      width: 100vw;
+      height: 40vh;
+      margin: 0 auto;
+      display: flex;
+      align-self: start;
+      justify-content: center;
+      visibility: hidden;
+    }
+}
 .about-container{
     width: 90vw;
     height: 70vh;
@@ -5,9 +18,9 @@
     overflow: hidden;
     z-index: 8;
     border-radius: 7px;
-    background-color: rgb(63, 49, 116);
     color: white;
     display: flex;
+    
 }
 .about-content{
     margin: 10px;
@@ -15,12 +28,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    position: relative;
+    z-index: inherit;
     #about-card{
         display: flex;
         flex-direction: row;
-        height: 150px;
+        height: 20vh;
         border-bottom: solid 1px grey;
-        background-color: rgb(87, 68, 155);
+        margin-left: 60px
     }
     .devm{
         height: 15 0px;
@@ -40,8 +55,26 @@
             color: rgb(185, 255, 249)
         }
         .about-card-content{
-            font-size: 12px;
+            font-size: 15px;
             color: rgb(230, 230, 230)
         }
     }
 }
+.img-1{
+    width: 90vw;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 0;
+  }
+  .img-cover-1 {
+    width: 90vw;
+    height: 70vh;
+    background-color: rgb(88, 52, 88);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }

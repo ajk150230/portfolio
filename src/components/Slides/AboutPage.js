@@ -1,9 +1,22 @@
-import React, { Component } from "react";
+import React, { useRef, useEffect }from "react";
+import { TimelineLite, Power2 } from "gsap";
+import CSSRulePlugin from "gsap/CSSRulePlugin";
 import "./About.scss";
+import palm from '../../Images/palmtrees.webp'
 
-export default class AboutPage extends Component {
-  render() {
+export default function AboutPage(){
+    let image = useRef(null);
+    let cover = useRef(null);
+    let imageReveal = CSSRulePlugin.getRule(".img-container:after");
+  
+    const tl = new TimelineLite();
+    useEffect(() => {
+      tl.to(imageReveal, 1.4, {height: "0%", ease: Power2.easeInOut })
+        .from(image, 1.4, { scale: 1.5, ease: Power2.easeInOut, delay: -1.6 })
+        .from(cover, 1.4, { scale: 5, ease: Power2.easeIn, delay: -1.6 });
+    });
     return (
+        <div className="bannerMain">
       <div className="about-container">
         <div className="about-content">
           <span id="about-card">
@@ -50,7 +63,13 @@ export default class AboutPage extends Component {
             </section>
           </span>
         </div>
+        <div
+            className="img-1"
+            style={{ backgroundImage: `url(${palm})` }}
+            ref={(el) => (image = el)}
+          ></div>
+          <div className="img-cover-1" ref={(el) => (cover = el)}></div>
       </div>
+        </div>
     );
   }
-}
