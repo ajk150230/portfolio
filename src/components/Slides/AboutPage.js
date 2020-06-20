@@ -32,7 +32,7 @@ export default function AboutPage(){
               <div className="about-card-content">
                 Hi, my name is Alex. I am a Full Stack Web Developer. I am a
                 recent graduate from DevMountain, a web development coding camp.
-                I am working on to get hired as Full Stack Web Developer around
+                I am working on getting hired as Full Stack Web Developer around
                 Dallas, Texas.
               </div>
               <div className="about-card-content">

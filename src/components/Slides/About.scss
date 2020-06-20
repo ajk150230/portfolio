@@ -33,9 +33,9 @@
     #about-card{
         display: flex;
         flex-direction: row;
-        height: 20vh;
+        height: 25vh;
         border-bottom: solid 1px grey;
-        margin-left: 60px
+        margin-left: 60px;
     }
     .devm{
         height: 15 0px;
@@ -45,7 +45,7 @@
     }
     #about-card-text{
         width: 600px;
-        margin: 20px;
+        margin: 18px;
         display: flex;
         flex-direction: column;
         .title{
@@ -55,7 +55,7 @@
             color: rgb(185, 255, 249)
         }
         .about-card-content{
-            font-size: 15px;
+            font-size: 14px;
             color: rgb(230, 230, 230)
         }
     }
